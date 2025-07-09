@@ -1,0 +1,14 @@
+target remote:1234
+set disassembly-flavor intel
+b *0x7c00
+b *0x7e00
+b *0x7e24
+b *0x7e89
+b *0x7e8f
+b *0x7e9a 
+b *0x7ea2
+layout src
+add-symbol-file mbr.symbol 0x7c00
+add-symbol-file bootloader.symbol 0x7e00
+
+
